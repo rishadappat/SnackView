@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "SnackView"
   spec.version      = "0.0.1"
-  spec.summary      = "SnackView will help you to show beautiful toast messages with blur effect."
+  spec.summary      = "A beautiful toast for iOS in Swift 5"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  A beautiful toast for iOS in Swift 5
+  SnackView will help you to show beautiful toast messages with blur effect.
                    DESC
 
   spec.homepage     = "https://github.com/rishadappat/SnackView"
@@ -94,7 +94,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "SnackView", "Classes/**/*.{h,m}"
   spec.exclude_files = "SnackViewSample", "Classes/**/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
