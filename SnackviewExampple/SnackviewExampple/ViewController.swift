@@ -11,7 +11,6 @@ import SnackView
 
 class ViewController: UIViewController {
     
-    lazy var builder = SnackViewBulder()
     var count = 0
     
     override func viewDidLoad() {
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func testButtonClicked(_ sender: Any) {
         count += 1
-        builder.buildSuccess(withMessage: "Test: \(count)")
+        SnackViewBulder().buildInfo(withMessage: "New \n Test: \n\(count)")
     }
 }
 

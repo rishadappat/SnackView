@@ -12,33 +12,27 @@ public class SnackViewBulder: NSObject {
     private var snackView: UIView!
     private var isSnackViewShowing: Bool = false
     private var timer: Timer? = nil
-    
-    private var bgColor = "00ad00"
-    private var iconName = ""
-    private var cornerRadius: CGFloat = 25
-    private var autoHide = true
+    private var snackConfig: SnackConfig!
     
     public func buildSuccess(withMessage message: String)
     {
-        showSnackView(withMessage: message, bgColor: UIColor.init(hex: "00ad00"), fontColor: .white, iconName: iconName, autoHide: autoHide)
+        self.snackConfig = SnackConfig().getSuccessConfig()
+        showSnackView(withMessage: message, bgColor: self.snackConfig.bgColor, fontColor: self.snackConfig.messageTextColor, iconName: self.snackConfig.iconName, autoHide: self.snackConfig.autoHide)
     }
     
     public func buildError(withMessage message: String)
     {
-        showSnackView(withMessage: message, bgColor: UIColor.init(hex: "ba000d"), fontColor: .white, iconName: iconName, autoHide: autoHide)
-    }
-    
-    public func showErrorSnackView(withMessage message: String)
-    {
-        showSnackView(withMessage: message, bgColor: UIColor.init(hex: "ba000d"), fontColor: .white, iconName: iconName, autoHide: autoHide)
+        self.snackConfig = SnackConfig().getErrorConfig()
+        showSnackView(withMessage: message, bgColor: self.snackConfig.bgColor, fontColor: self.snackConfig.messageTextColor, iconName: self.snackConfig.iconName, autoHide: self.snackConfig.autoHide)
     }
     
     public func buildInfo(withMessage message: String)
     {
-        showSnackView(withMessage: message, bgColor: UIColor.init(hex: "00ad00"), fontColor: .white, iconName: iconName, autoHide: autoHide)
+        self.snackConfig = SnackConfig().getInfoConfig()
+        showSnackView(withMessage: message, bgColor: self.snackConfig.bgColor, fontColor: self.snackConfig.messageTextColor, iconName: self.snackConfig.iconName, autoHide: self.snackConfig.autoHide)
     }
     
-    private func showSnackView(withMessage message: String, bgColor color: UIColor, fontColor textColor: UIColor, iconName iconImg: String, autoHide: Bool)
+    private func showSnackView(withMessage message: String, bgColor color: String, fontColor textColor: UIColor, iconName iconImg: String, autoHide: Bool)
     {
         if let view = UIApplication.shared.keyWindows
         {
@@ -46,12 +40,12 @@ public class SnackViewBulder: NSObject {
                 self.timer?.invalidate()
                 var snackviewHeight: CGFloat = 50
                 self.snackView = UIView.init(frame: CGRect.init(x: 16, y: view.frame.height + 8, width: view.frame.size.width - 32, height: snackviewHeight))
-                
-                self.snackView.cornerRadius = self.cornerRadius
+                let bgColor = UIColor(hex: color)
+                self.snackView.cornerRadius = self.snackConfig.cornerRadius
                 self.snackView.shadowRadius = 8
                 self.snackView.shadowOpacity = 0.8
                 self.snackView.borderWidth = 1
-                self.snackView.borderColor = color
+                self.snackView.borderColor = bgColor
                 self.snackView.shadowOffset = CGSize.init(width: 0, height: 0)
                 
                 let messageLabel = UILabel.init(frame: CGRect.init(x: 16, y: 8, width: self.snackView.frame.size.width - 52, height: snackviewHeight))
@@ -78,11 +72,11 @@ public class SnackViewBulder: NSObject {
                     let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
                     let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
                     blurEffectView.contentView.addSubview(vibrancyView)
-                    blurEffectView.backgroundColor = color.withAlphaComponent(0.8)
+                    blurEffectView.backgroundColor = bgColor.withAlphaComponent(0.8)
                     return blurEffectView
                 }()
                 blurEffectView.frame = self.snackView.bounds
-                blurEffectView.cornerRadius = self.cornerRadius
+                blurEffectView.cornerRadius = self.snackConfig.cornerRadius
                 self.snackView.addSubview(blurEffectView)
                 self.snackView.addSubview(messageLabel)
                 self.snackView.addSubview(messageImage)
@@ -103,7 +97,7 @@ public class SnackViewBulder: NSObject {
                 self.snackView.Y = view.frame.height - self.snackView.frame.height - self.snackView.safeAreaInsets.bottom - 20
                 self.snackView?.alpha = 1
             }) { completed in
-                if(self.autoHide)
+                if(self.snackConfig.autoHide)
                 {
                     self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.hideSnackView), userInfo: nil, repeats: false)
                 }
