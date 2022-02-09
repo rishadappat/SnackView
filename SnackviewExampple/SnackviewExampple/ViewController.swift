@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SnackView
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SnackViewBulder().buildSuccess(withMessage: "Test")
     }
 }
 

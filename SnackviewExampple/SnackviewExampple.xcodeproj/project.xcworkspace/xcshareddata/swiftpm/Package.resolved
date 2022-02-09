@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SnackView",
+        "repositoryURL": "https://github.com/rishadappat/SnackView",
+        "state": {
+          "branch": "master",
+          "revision": "3c4809e6074ec464fe8087b31dc3f1f198ae876a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

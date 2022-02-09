@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E621DEE627B3989F000B337F /* SnackView in Frameworks */ = {isa = PBXBuildFile; productRef = E621DEE527B3989F000B337F /* SnackView */; };
 		E65ABD9327B3816D0072176A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65ABD9227B3816D0072176A /* AppDelegate.swift */; };
 		E65ABD9527B3816D0072176A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65ABD9427B3816D0072176A /* SceneDelegate.swift */; };
 		E65ABD9727B3816D0072176A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65ABD9627B3816D0072176A /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E621DEE627B3989F000B337F /* SnackView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = SnackviewExampple;
+			packageProductDependencies = (
+				E621DEE527B3989F000B337F /* SnackView */,
+			);
 			productName = SnackviewExampple;
 			productReference = E65ABD8F27B3816D0072176A /* SnackviewExampple.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = E65ABD8627B3816D0072176A;
+			packageReferences = (
+				E621DEE427B3989F000B337F /* XCRemoteSwiftPackageReference "SnackView" */,
+			);
 			productRefGroup = E65ABD9027B3816D0072176A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E621DEE427B3989F000B337F /* XCRemoteSwiftPackageReference "SnackView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rishadappat/SnackView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E621DEE527B3989F000B337F /* SnackView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E621DEE427B3989F000B337F /* XCRemoteSwiftPackageReference "SnackView" */;
+			productName = SnackView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E65ABD8727B3816D0072176A /* Project object */;
 }
