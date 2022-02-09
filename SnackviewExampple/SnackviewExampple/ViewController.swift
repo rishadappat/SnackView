@@ -10,14 +10,17 @@ import SnackView
 
 
 class ViewController: UIViewController {
-
+    
+    lazy var builder = SnackViewBulder()
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func testButtonClicked(_ sender: Any) {
-        SnackViewBulder().buildSuccess(withMessage: "Test")
+        count += 1
+        builder.buildSuccess(withMessage: "Test: \(count)")
     }
-    
 }
 
