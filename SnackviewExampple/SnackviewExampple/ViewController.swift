@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnackView
 
 class ViewController: UIViewController {
 
