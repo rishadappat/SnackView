@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SnackViewBulder: NSObject {
+public class SnackViewBulder: NSObject {
     private var snackView: UIView!
     private var isSnackViewShowing: Bool = false
     private var timer: Timer? = nil
