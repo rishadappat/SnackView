@@ -18,22 +18,22 @@ public class SnackViewBulder: NSObject {
     private var cornerRadius: CGFloat = 25
     private var autoHide = true
     
-    func buildSuccess(withMessage message: String)
+    public func buildSuccess(withMessage message: String)
     {
         showSnackView(withMessage: message, bgColor: UIColor.init(hex: "00ad00"), fontColor: .white, iconName: iconName, autoHide: autoHide)
     }
     
-    func buildError(withMessage message: String)
+    public func buildError(withMessage message: String)
     {
         showSnackView(withMessage: message, bgColor: UIColor.init(hex: "ba000d"), fontColor: .white, iconName: iconName, autoHide: autoHide)
     }
     
-    func showErrorSnackView(withMessage message: String)
+    public func showErrorSnackView(withMessage message: String)
     {
         showSnackView(withMessage: message, bgColor: UIColor.init(hex: "ba000d"), fontColor: .white, iconName: iconName, autoHide: autoHide)
     }
     
-    func buildInfo(withMessage message: String)
+    public func buildInfo(withMessage message: String)
     {
         showSnackView(withMessage: message, bgColor: UIColor.init(hex: "00ad00"), fontColor: .white, iconName: iconName, autoHide: autoHide)
     }
