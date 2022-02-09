@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6D6CBFB27743917006723DB /* SnackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2910F2470991D00FB240F /* SnackView.framework */; };
+		E6D6CBFC27743917006723DB /* SnackView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2910F2470991D00FB240F /* SnackView.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E6F291142470991D00FB240F /* SnackView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F291122470991D00FB240F /* SnackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6F2911B24709AD000FB240F /* SnackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F2911A24709ACF00FB240F /* SnackView.swift */; };
+		E6F2911B24709AD000FB240F /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F2911A24709ACF00FB240F /* Snack.swift */; };
 		E6F2911D24709B1500FB240F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F2911C24709B1500FB240F /* UIView+Extension.swift */; };
 		E6F2911F24709B2600FB240F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F2911E24709B2600FB240F /* UIColor+Extension.swift */; };
 		E6F291272471D17600FB240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F291262471D17600FB240F /* AppDelegate.swift */; };
@@ -20,11 +22,36 @@
 		E6F291362471D17A00FB240F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F291342471D17A00FB240F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E6D6CBFD27743917006723DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F291062470991D00FB240F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F2910E2470991D00FB240F;
+			remoteInfo = SnackView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6D6CBFF27743917006723DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E6D6CBFC27743917006723DB /* SnackView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E6D6CBF8277438FA006723DB /* SnackView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SnackView.xcodeproj; sourceTree = "<group>"; };
 		E6F2910F2470991D00FB240F /* SnackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F291122470991D00FB240F /* SnackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnackView.h; sourceTree = "<group>"; };
 		E6F291132470991D00FB240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6F2911A24709ACF00FB240F /* SnackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackView.swift; sourceTree = "<group>"; };
+		E6F2911A24709ACF00FB240F /* Snack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		E6F2911C24709B1500FB240F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E6F2911E24709B2600FB240F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E6F291242471D17600FB240F /* SnackViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,18 +77,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D6CBFB27743917006723DB /* SnackView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6D6CBF7277438FA006723DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6D6CBF8277438FA006723DB /* SnackView.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6D6CBF9277438FA006723DB /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E6F291052470991D00FB240F = {
 			isa = PBXGroup;
 			children = (
 				E6F291112470991D00FB240F /* SnackView */,
 				E6F291252471D17600FB240F /* SnackViewSample */,
 				E6F291102470991D00FB240F /* Products */,
+				E6D6CBF7277438FA006723DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +122,7 @@
 				E6F291122470991D00FB240F /* SnackView.h */,
 				E6F2911C24709B1500FB240F /* UIView+Extension.swift */,
 				E6F2911E24709B2600FB240F /* UIColor+Extension.swift */,
-				E6F2911A24709ACF00FB240F /* SnackView.swift */,
+				E6F2911A24709ACF00FB240F /* Snack.swift */,
 				E6F291132470991D00FB240F /* Info.plist */,
 			);
 			path = SnackView;
@@ -140,10 +182,12 @@
 				E6F291202471D17600FB240F /* Sources */,
 				E6F291212471D17600FB240F /* Frameworks */,
 				E6F291222471D17600FB240F /* Resources */,
+				E6D6CBFF27743917006723DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E6D6CBFE27743917006723DB /* PBXTargetDependency */,
 			);
 			name = SnackViewSample;
 			productName = SnackViewSample;
@@ -157,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = Appat;
 				TargetAttributes = {
 					E6F2910E2470991D00FB240F = {
@@ -180,6 +224,12 @@
 			mainGroup = E6F291052470991D00FB240F;
 			productRefGroup = E6F291102470991D00FB240F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E6D6CBF9277438FA006723DB /* Products */;
+					ProjectRef = E6D6CBF8277438FA006723DB /* SnackView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E6F2910E2470991D00FB240F /* SnackView */,
@@ -215,7 +265,7 @@
 			files = (
 				E6F2911F24709B2600FB240F /* UIColor+Extension.swift in Sources */,
 				E6F2911D24709B1500FB240F /* UIView+Extension.swift in Sources */,
-				E6F2911B24709AD000FB240F /* SnackView.swift in Sources */,
+				E6F2911B24709AD000FB240F /* Snack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +281,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6D6CBFE27743917006723DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F2910E2470991D00FB240F /* SnackView */;
+			targetProxy = E6D6CBFD27743917006723DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E6F2912C2471D17600FB240F /* Main.storyboard */ = {
@@ -278,6 +336,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -341,6 +400,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

@@ -8,15 +8,21 @@
 
 import UIKit
 
-class SnackView: NSObject {
-    var snackView: UIView!
-    var isSnackViewShowing: Bool = false
-    var timer: Timer? = nil
+class Snack: NSObject {
+    private var snackView: UIView!
+    private var isSnackViewShowing: Bool = false
+    private var timer: Timer? = nil
     
-    var bgColor = "00ad00"
-    var iconName = ""
-    var cornerRadius: CGFloat = 25
-    var autoHide = true
+    private var bgColor = "00ad00"
+    private var iconName = ""
+    private var cornerRadius: CGFloat = 25
+    private var autoHide = true
+    
+    private enum Position
+    {
+        case Top
+        case Bottom
+    }
     
     func buildSuccess(withMessage message: String)
     {
