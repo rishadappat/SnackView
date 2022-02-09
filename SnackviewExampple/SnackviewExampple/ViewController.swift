@@ -13,7 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func testButtonClicked(_ sender: Any) {
         SnackViewBulder().buildSuccess(withMessage: "Test")
     }
+    
 }
 

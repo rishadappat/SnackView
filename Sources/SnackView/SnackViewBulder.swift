@@ -85,6 +85,7 @@ public class SnackViewBulder: NSObject {
             self.snackView.addSubview(blurEffectView)
             self.snackView.addSubview(messageLabel)
             self.snackView.addSubview(messageImage)
+            show()
         }
     }
     
